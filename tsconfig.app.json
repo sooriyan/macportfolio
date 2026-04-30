@@ -19,7 +19,22 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Paths */
+    "baseUrl": ".",
+    "paths": {
+      "#components": ["src/components"],
+      "#components/*": ["src/components/*"],
+      "#constants": ["src/constants"],
+      "#constants/*": ["src/constants/*"],
+      "#store": ["src/store"],
+      "#store/*": ["src/store/*"],
+      "#hoc": ["src/hoc"],
+      "#hoc/*": ["src/hoc/*"],
+      "#windows": ["src/windows"],
+      "#windows/*": ["src/windows/*"]
+    }
   },
   "include": ["src"]
 }
