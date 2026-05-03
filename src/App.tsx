@@ -1,6 +1,6 @@
 import './App.css'
 
-import { Navbar, Welcome, Dock } from '#components';
+import { Navbar, Welcome, Dock, Home } from '#components';
 import { Finder, Resume, Safari, Terminal, Text, Image, Contact } from '#windows';
 
 import gsap from 'gsap';
@@ -22,6 +22,8 @@ function App() {
       <Text />
       <Image />
       <Contact />
+
+      <Home />
     </main>
   )
 }
