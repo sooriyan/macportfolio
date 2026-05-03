@@ -51,7 +51,7 @@ body {
       @apply flex items-center gap-5 max-sm:hidden;
 
       p {
-        @apply text-sm cursor-pointer hover:bg-[#b2aeeb] hover:rounded-2xl pt-2 px-2 py-2 pb-2 transition-all;
+        @apply text-sm cursor-pointer hover:bg-white/20 hover:backdrop-blur-3xl hover:rounded-2xl pt-2 px-2 py-2 pb-2;
       }
     }
 
