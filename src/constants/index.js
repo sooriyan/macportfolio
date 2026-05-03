@@ -77,25 +77,17 @@ const dockApps = [
 const blogPosts = [
     {
         id: 1,
-        date: "Sep 2, 2025",
-        title:
-            "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-        image: "/images/blog1.png",
-        link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+        date: "May 2, 2026",
+        title: "Next.js VS Tanstack Start: Which Should You Choose in 2026?",
+        image: "/images/blog1.jpg",
+        link: "https://medium.com/@sooriyan10898/next-js-vs-tanstack-start-which-should-you-choose-in-2026-ab249e89cada",
     },
     {
         id: 2,
-        date: "Aug 28, 2025",
-        title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-        image: "/images/blog2.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-    },
-    {
-        id: 3,
-        date: "Aug 15, 2025",
-        title: "The Ultimate Guide to Mastering GSAP Animations",
-        image: "/images/blog3.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+        date: "May 1, 2026",
+        title: "Mastering CSS Layouts: Why Flexbox is Your New Best Friend",
+        image: "/images/blog2.jpg",
+        link: "https://medium.com/@sooriyan10898/mastering-modern-layouts-with-flexbox-9ef4bf95c388",
     },
 ];
 
