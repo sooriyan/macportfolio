@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import useLockStore from "#store/lock";
 
 const LockScreen = () => {
-    const { isLocked, setIsLocked } = useLockStore();
+    const { setIsLocked } = useLockStore();
     const [time, setTime] = useState(dayjs());
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -15,7 +15,7 @@ const LockScreen = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const handleUnlock = (e: React.FormEvent | React.KeyboardEvent) => {
+    const handleUnlock = (e: any) => {
         if (e.key === "Enter" || e.type === "click") {
             setIsLocked(false);
             localStorage.setItem("locked", "false");

@@ -7,7 +7,7 @@ const FONT_WEIGHTS = {
     title: { min: 400, max: 900, default: 400 },
 }
 
-const renderText = (text, className, baseWeight = 400) => {
+const renderText = (text: string, className: string, baseWeight = 400) => {
     return [...text].map((char, i) => (
         <span key={i} className={className} style={{ fontVariationSettings: `'wght' ${baseWeight}` }}>
             {char === ' ' ? "\u00A0" : char}
@@ -15,19 +15,19 @@ const renderText = (text, className, baseWeight = 400) => {
     );
 }
 
-const setupTextHover = (container, type) => {
+const setupTextHover = (container: HTMLElement | null, type: string) => {
     if (!container) return () => { };
 
     const letters = container.querySelectorAll('span')
     const { min, max, default: base } = FONT_WEIGHTS[type as keyof typeof FONT_WEIGHTS]
 
-    const animateLetter = (letter, weight, duration = 0.25) => {
+    const animateLetter = (letter: Element, weight: number, duration = 0.25) => {
         return gsap.to(letter, { duration, ease: 'power2.out', fontVariationSettings: `'wght' ${weight}` });
     }
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
         const { left } = container.getBoundingClientRect();
         const mouseX = e.clientX - left;
-        letters.forEach((letter, i) => {
+        letters.forEach((letter: Element) => {
             const { left: l, width: w } = letter.getBoundingClientRect();
             const letterCenterX = l - left + w / 2;
             const distance = Math.abs(mouseX - letterCenterX);
@@ -35,7 +35,7 @@ const setupTextHover = (container, type) => {
             animateLetter(letter, min + (max - min) * intensity);
         })
     }
-    const handleMouseLeave = () => letters.forEach(letter =>
+    const handleMouseLeave = () => letters.forEach((letter: Element) =>
         animateLetter(letter, base, 0.3)
     );
 

@@ -7,15 +7,15 @@ import useWindowStore from "#store/window.js";
 
 const Dock = () => {
     const { openWindow, closeWindow, windows } = useWindowStore()
-    const dockRef = useRef(null);
+    const dockRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
         const dock = dockRef.current;
         if (!dock) return;
         const icons = dock.querySelectorAll(".dock-icon");
-        const animateIcons = (mouseX) => {
+        const animateIcons = (mouseX: number) => {
             const { left } = dock.getBoundingClientRect();
-            icons.forEach((icon) => {
+            icons.forEach((icon: Element) => {
                 const { left: iconLeft, width: iconWidth } = icon.getBoundingClientRect();
                 const center = iconLeft - left + iconWidth / 2;
                 const distance = Math.abs(mouseX - center);
@@ -29,12 +29,12 @@ const Dock = () => {
             });
         };
 
-        const handleMouseMove = (e) => {
+        const handleMouseMove = (e: MouseEvent) => {
             const { left } = dock.getBoundingClientRect();
             animateIcons(e.clientX - left);
         }
 
-        const resetIcons = () => icons.forEach((icon) =>
+        const resetIcons = () => icons.forEach((icon: Element) =>
             gsap.to(icon, {
                 scale: 1,
                 y: 0,
@@ -52,7 +52,7 @@ const Dock = () => {
         }
     }, []);
 
-    const toggleApp = (app) => {
+    const toggleApp = (app: any) => {
         if (!app.canOpen) return;
         const window = windows[app.id];
 
