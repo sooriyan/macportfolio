@@ -352,7 +352,7 @@ const ABOUT_LOCATION = {
     children: [
         {
             id: 1,
-            name: "me.png",
+            name: "casual-me.png",
             icon: "/images/image.png",
             kind: "file",
             fileType: "img",
@@ -361,21 +361,12 @@ const ABOUT_LOCATION = {
         },
         {
             id: 2,
-            name: "casual-me.png",
+            name: "me.png",
             icon: "/images/image.png",
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
             imageUrl: "/images/sooriyan-2.jpeg",
-        },
-        {
-            id: 3,
-            name: "conference-me.png",
-            icon: "/images/image.png",
-            kind: "file",
-            fileType: "img",
-            position: "top-52 left-80",
-            imageUrl: "/images/sooriyan-3.jpg",
         },
         {
             id: 4,
