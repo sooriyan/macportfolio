@@ -10,7 +10,7 @@ const Contact = () => {
                 <h2>Contact Me</h2>
             </div>
             <div className="bg-white p-5 space-y-5 h-full">
-                <img src="/images/adrian.jpg" alt="Sooriyan Padali" className="w-20 rounded-full" />
+                <img src="/images/sooriyan-4.jpg" alt="Sooriyan Padali" className="w-50 rounded-full" />
                 <h3>Let's connect</h3>
                 <p>Got an idea? A bug to report? Or just want to say hi? Send me a message!</p>
                 <p className="text-sm font-medium">sooriyan10898@gmail.com</p>

@@ -5,6 +5,7 @@ import Resume from "./Resume";
 import Finder from "./Finder";
 import Image from "./Image";
 import Contact from "./Contact";
+import LockScreen from "./LockScreen";
 export {
     Terminal,
     Safari,
@@ -12,5 +13,6 @@ export {
     Finder,
     Text,
     Image,
-    Contact
+    Contact,
+    LockScreen
 };
