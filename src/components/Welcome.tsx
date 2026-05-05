@@ -63,7 +63,7 @@ const Welcome = () => {
             <p ref={subtitleRef}>{renderText("Hey, I'm Sooriyan! Welcome to my", 'text-3xl font-georama', 100)}</p>
             <h1 ref={titleRef} className="mt-7 text-9xl">{renderText("Portfolio", 'text-9xl italic font-georama')}</h1>
             <div className="small-screen">
-                <p>This Mac OS Portfolio is designed for only desktop and tablet screens. Please visit <a href="https://sooriyan.vercel.app/" target="_blank" rel="noopener noreferrer">My Other Portfolio</a> for mobile view.</p>
+                <p>This Mac OS Portfolio is designed for only desktop and tablet screens. Please visit <a href="https://sooriyan.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline">My Other Portfolio</a> for mobile view.</p>
             </div>
         </section>
     )
